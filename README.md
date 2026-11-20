@@ -18,15 +18,29 @@ suivi et pointage par la secrétaire, statistiques de participation pour le pré
 
 La secrétaire et le président ont aussi accès à l'espace « Réunions » comme n'importe quel membre.
 
-## Essayer tout de suite (mode démo)
+## Essayer tout de suite (mode démo / dev)
 
 `js/config.js` contient `API_URL: ''` : l'application fonctionne alors avec des données fictives stockées dans le
-navigateur (le vrai `Code.gs` est exécuté dans un simulateur local). Comptes démo, mot de passe `demo1234` :
-`secretaire`, `president`, `claire.dubois`.
+navigateur (le vrai `Code.gs` est exécuté dans un simulateur local via `js/gas-shim.js` et `js/demo-seed.js`).
+Comptes démo, mot de passe `demo1234` : `secretaire`, `president`, `claire.dubois`.
+
+Le projet est 100 % statique (pas de build, pas de dépendances) : il suffit de servir le dossier avec n'importe quel
+serveur HTTP local (ouvrir `index.html` directement en `file://` ne fonctionne pas à cause du service worker et des
+modules JS).
 
 ```bash
 python -m http.server 8080   # puis http://localhost:8080
 ```
+
+Alternatives :
+
+```bash
+npx serve .                  # Node.js
+php -S localhost:8080        # PHP
+```
+
+Pour repartir d'un état vierge, videz le `localStorage` du navigateur (DevTools > Application > Local Storage) ou
+ouvrez la page en navigation privée.
 
 ## Mise en production
 
