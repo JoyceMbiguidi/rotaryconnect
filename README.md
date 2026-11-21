@@ -20,6 +20,8 @@ La secrétaire et le président ont aussi accès à l'espace « Réunions » com
 
 ## Essayer tout de suite (mode démo / dev)
 
+### Version originale (HTML/JS vanille + GAS)
+
 `js/config.js` contient `API_URL: ''` : l'application fonctionne alors avec des données fictives stockées dans le
 navigateur (le vrai `Code.gs` est exécuté dans un simulateur local via `js/gas-shim.js` et `js/demo-seed.js`).
 Comptes démo, mot de passe `demo1234` : `secretaire`, `president`, `claire.dubois`.
@@ -38,6 +40,28 @@ Alternatives :
 npx serve .                  # Node.js
 php -S localhost:8080        # PHP
 ```
+
+### Version Astro (SSR + API routes + GAS proxy)
+
+Une version full-stack a été créée avec **Astro** dans le dossier `../rotaryconnect-web/`. Elle offre :
+- **SSR (Server-Side Rendering)** : pages dynamiques avec authentification
+- **API routes native** : proxy vers GAS sans CORS
+- **Comptes de test intégrés** : pour tester localement sans GAS
+
+Lancer le serveur dev :
+
+```bash
+cd ../rotaryconnect-web
+npm install
+npm run dev
+```
+
+Accès : `http://localhost:4322`
+
+Comptes de test (mode dev uniquement) :
+- `secretaire` / `pass1234`
+- `member` / `pass1234`
+- `president` / `pass1234`
 
 Pour repartir d'un état vierge, videz le `localStorage` du navigateur (DevTools > Application > Local Storage) ou
 ouvrez la page en navigation privée.
