@@ -55,6 +55,9 @@ function doGet() {
 }
 
 function doPost(e) {
+  if (e.requestMethod === 'OPTIONS') {
+    return json_({ ok: true });
+  }
   let res;
   try {
     let req;
@@ -76,7 +79,11 @@ function doPost(e) {
 }
 
 function json_(obj) {
-  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+  return ContentService.createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON)
+    .addHeader('Access-Control-Allow-Origin', '*')
+    .addHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+    .addHeader('Access-Control-Allow-Headers', 'Content-Type, text/plain');
 }
 
 const ALL = ROLES;
