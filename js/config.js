@@ -4,5 +4,5 @@
  * Laissée vide, l'application tourne en MODE DÉMO avec des données locales fictives.
  */
 window.ROTARYCONNECT_CONFIG = {
-  API_URL: 'https://joycembiguidi.github.io/rotaryconnect/'
+  API_URL: 'https://script.google.com/macros/s/AKfycbwuhvmHU6j0DIcc_zSWxlJhAIPGPD3p9zPh46nVztSxsRc5jI1H59oSjh0zXiuAfHao/exec'
 };
