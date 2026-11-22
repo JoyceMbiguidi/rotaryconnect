@@ -63,7 +63,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .btn.danger { background: #fff; color: var(--ko); border-color: var(--ko); }
 .btn.danger:hover { background: var(--ko-soft); }
 .btn.ok { background: var(--ok); border-color: var(--ok); }
-.btn.ghost { background: transparent; border-color: transparent; color: var(--white); }
+.btn.ghost { background: transparent; border-color: transparent; }
 .btn.ghost:hover { background: var(--blue-soft); }
 .btn.sm { min-height: 36px; padding: .3rem .8rem; font-size: .9rem; }
 .btn.block { width: 100%; }
