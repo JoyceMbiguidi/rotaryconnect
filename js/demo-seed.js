@@ -75,13 +75,13 @@
     const everyone = [{ id: sec.user.id, p: 0.95 }, { id: pres.id, p: 0.9 }].concat(people);
     const passes = [
       meeting(-8, 'Réunion statutaire', 'Réunion statutaire', '19:30', 'Salle des fêtes', 'Point sur les actions de l\'année.'),
-      meeting(-7, 'Visite d\'entreprise', 'Convivialité', '18:00', 'Brasserie du port'),
+      meeting(-7, 'Visite d\'entreprise', 'Apéro gazon', '18:00', 'Brasserie du port'),
       meeting(-6, 'Réunion statutaire', 'Réunion statutaire', '19:30', 'Salle des fêtes'),
       meeting(-5, 'Conférence : l\'eau potable', 'Conférence', '19:30', 'Médiathèque'),
       meeting(-4, 'Réunion statutaire', 'Réunion statutaire', '19:30', 'Salle des fêtes'),
       meeting(-3, 'Action de service : collecte', 'Action de service', '09:00', 'Place du marché'),
       meeting(-2, 'Réunion statutaire', 'Réunion statutaire', '19:30', 'Salle des fêtes'),
-      meeting(-1, 'Conseil du club', 'Conseil du club', '19:00', 'Salle des fêtes')
+      meeting(-1, 'Comité', 'Comité', '19:00', 'Salle des fêtes')
     ];
     passes.forEach(m => {
       const presences = {};
@@ -93,7 +93,7 @@
     const futures = [
       prochaine,
       meeting(2, 'Conférence : cybersécurité', 'Conférence', '19:30', 'Médiathèque', 'Ouvert aux conjoints.'),
-      meeting(3, 'Soirée de gala', 'Convivialité', '20:00', 'Château de la Tour', 'Tenue de soirée.'),
+      meeting(3, 'Soirée de gala', 'Apéro gazon', '20:00', 'Château de la Tour', 'Tenue de soirée.'),
       meeting(4, 'Réunion statutaire', 'Réunion statutaire', '19:30', 'Salle des fêtes')
     ];
     people.forEach((p, i) => {
