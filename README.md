@@ -1,6 +1,6 @@
 # RotaryConnect
 
-Application web installable (PWA) pour la gestion des réunions d'un club : confirmation de présence des membres,
+Application web installable (PWA) pour la gestion des réunions du Rotary Club Reims : confirmation de présence des membres,
 suivi et pointage par la secrétaire, statistiques de participation pour le président.
 
 - **Front** : HTML/CSS/JS sans dépendance, hébergé sur **GitHub Pages**, responsive (mobile d'abord).
@@ -18,7 +18,7 @@ suivi et pointage par la secrétaire, statistiques de participation pour le pré
 
 La secrétaire et le président ont aussi accès à l'espace « Réunions » comme n'importe quel membre.
 
-## Essayer tout de suite (mode démo / dev)
+## Démarrage à chaud (mode démo / dev)
 
 ### Version originale (HTML/JS vanille + GAS)
 
@@ -128,7 +128,7 @@ apps-script/Code.gs                         API (à coller dans Apps Script)
 
 ## Sécurité – points d'attention
 
-- Ne publiez pas d'identifiants réels dans le dépôt. Le secret de session est stocké dans les propriétés du script, pas dans le Sheet.
+- Identifiants réels non publiés dans le dépôt. Le secret de session est stocké dans les propriétés du script, pas dans le Sheet.
 - Les mots de passe provisoires sont affichés une seule fois à la secrétaire ; changement obligatoire à la première connexion.
-- Limitez le partage du Google Sheet aux seuls administrateurs : il contient les e-mails et téléphones des membres.
-- Pensez à la conformité RGPD (information des membres sur les données conservées).
+- Le partage du Google Sheet est limité aux seuls administrateurs : il contient les e-mails et téléphones des membres.
+- Conformité RGPD (information des membres sur les données conservées).
