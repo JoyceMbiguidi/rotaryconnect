@@ -5,7 +5,7 @@
 
   const $app = document.getElementById('app');
   const ROLE_LABEL = { membre: 'Membre', secretaire: 'Secrétaire', president: 'Président' };
-  const TYPES = ['Réunion statutaire', 'Conférence', 'Action de service', 'Convivialité', 'Conseil du club', 'Autre'];
+  const TYPES = ['Réunion statutaire', 'Conférence', 'Action de service', 'Apéro gazon)', 'Comité', 'Autre'];
   const ALL = ['membre', 'secretaire', 'president'];
 
   let user = null;
